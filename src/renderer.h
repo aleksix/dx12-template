@@ -34,12 +34,11 @@ public:
 		fence_value(0), fence_event(NULL),
 		// Projection matrices
 		mwp(XMMatrixIdentity()),
-		world(XMMatrixTranslation(0.f, 0.f, 0.f)* XMMatrixScaling(0.5f, 0.5f, 0.5f)),
+		world(XMMatrixTranslation(0.f, 0.f, 0.f) * XMMatrixScaling(0.5f, 0.5f, 0.5f)),
 		view(XMMatrixIdentity()),
 		projection(XMMatrixPerspectiveFovLH(XMConvertToRadians(60.f), aspect_ratio, 0.001f, 100.f)),
 		// Eye variables. Put the eye in front of the box
-		eye_position({ 0.0f, 0.5f, 5.0f }),
-		angle(XMConvertToRadians(180.0f))
+		eye_position({ 0.0f, 0.5f, -5.0f })
 	{
 		vertices.clear();
 	};

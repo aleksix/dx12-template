@@ -326,7 +326,7 @@ void Renderer::LoadAssets()
 				tinyobj::index_t idx = shapes[s].mesh.indices[index_offset + v];
 				tinyobj::real_t vx = attrib.vertices[3 * idx.vertex_index + 0];
 				tinyobj::real_t vy = attrib.vertices[3 * idx.vertex_index + 1];
-				tinyobj::real_t vz = attrib.vertices[3 * idx.vertex_index + 2];
+				tinyobj::real_t vz = -1.0f * attrib.vertices[3 * idx.vertex_index + 2];
 				ColorVertex vertex = { 
 					{vx, vy, vz}, 
 					{colors[0], colors[1], colors[2], 1.0f} 
